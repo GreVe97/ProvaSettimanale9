@@ -42,7 +42,6 @@ export default class Galleria extends Component {
         console.log("render galleria");
         return (
             <Container>
-
                 <div className="grigliaFilm my-4">
                     <h3 className="h4">{this.props.saga}</h3>
                     <div id={this.state.sagaContratta} className="carousel slide" data-bs-ride="carousel">
