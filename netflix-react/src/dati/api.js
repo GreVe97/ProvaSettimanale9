@@ -1,2 +1,2 @@
-export let urlApi = "http://www.omdbapi.com/?apikey=55133792&type=movie&s=X-men"
-export let saghe = ["Jurassic Park", "X-men", "Terminator", "Matrix", "Mission: Impossible", "Lego", "Star wars", "Avengers", "Batman", "Superman", "Spiderman", "Die Hard", "Transformers", "Indiana Jones", "Mad Max", "Pirates of the Caribbean", "Ghostbusters" , "Hunger Games", "Saw", "DragonBall"]
+export let urlApi = "http://www.omdbapi.com/?apikey=55133792&s="
+export let saghe = ["Jurassic Park", "X-men", "Terminator", "Matrix", "Mission Impossible", "Lego", "Star wars", "Avengers", "Batman", "Superman", "Spider man", "Die Hard", "Transformers", "Indiana Jones", "Mad Max", "Pirates of the Caribbean", "Ghostbusters" , "Hunger Games", "Saw", "Halloween", "Nightmare", "Friday the 13th","Star Trek", "Police Academy", "Asterix", "Fantozzi", "American Pie"]

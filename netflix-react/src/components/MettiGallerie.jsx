@@ -1,117 +1,26 @@
-/* import React, { Component } from 'react'
-import { Container, Spinner, Alert,} from 'react-bootstrap'
-import scrolla from './scrolla';
+import React from 'react'
+import {saghe} from '../dati/api';
+import Galleria from './Galleria';
 
-export default class UsersComponent extends Component {
-
-state = {
-    users: [],
-    isLoading: false,
-    errMsg: false
+export default function MettiGallerie() {
+  let sottoSaghe = sottoArray(saghe, Math.floor(Math.random() * (6 - 3 + 1)) + 3)
+ 
+  return (
+    <>
+    {sottoSaghe.map(ele =>{
+      console.log(ele);
+      return <Galleria key={ele} saga={ele}/>
+          
+    })}     
+    </>
+  )
 }
-
-
-
-componentDidMount() {
-    this.setState({
-      isLoading: true
-    });
-
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(data => {
-        setTimeout(() => {
-          this.setState({
-            users: data,
-            isLoading: false
-          });
-        }, 2000);
-      })
-      .catch(error => {
-        console.error(error);
-        this.setState({
-          isLoading: false,
-          errMsg: true
-        });
-      });
-  }
-
-  render() {
-    return (
-      <Container>
-      <h1>User List</h1>
-      
-      {this.state.isLoading && <Spinner animation="border" />}
-      
-      {this.state.errMsg &&
-        <Alert variant="warning">
-          Si è verificato un errore nel caricamento dei dati
-        </Alert> 
-      }
-
-        <div>
-          {this.state.users.map(u => (
-            <h1 key={u.id} >
-              {u.name}
-            </h1>
-          ))}
-        </div>
-    </Container>
-    )
-  }
+function sottoArray(arr, n) {
+  let sottoArray = [];
+  let arrClone = [...arr];
+  for (let i = 0; i < n; i++) {
+      sottoArray.push(arrClone.splice(Math.floor(Math.random() * arrClone.length), 1)[0]);  
+  }    
+  console.log(sottoArray, n);
+  return sottoArray;  
 }
- */
-
-import React, { Component } from 'react'
-import { ListGroup, Container, Spinner, Alert,} from 'react-bootstrap'
-import scrolla from './scrolla';
-import MettiFilm from './MettiFilm'
-
-export default class UsersComponent extends Component {
-
-state = {
-    movies: [],
-    isLoading: false,
-    errMsg: false
-}
-
-
-
-componentDidMount() {
-    this.setState({
-      isLoading: true
-    });
-
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => {
-        setTimeout(() => {
-          this.setState({
-            movies: json.Search,
-            isLoading: false
-          });
-        }, 2000);
-      })
-      .catch(error => {
-        console.error(error);
-        this.setState({
-          isLoading: false,
-          errMsg: true
-        });
-      });
-  }
-
-  render() {
-    return (
-      <Container>      
-      {this.state.isLoading && <Spinner animation="border" />}      
-      {this.state.errMsg &&
-        <Alert variant="warning">
-          Si è verificato un errore nel caricamento dei dati
-        </Alert> 
-      }
-        <MettiFilm/>
-    </Container>
-    )
-  }
-} 
