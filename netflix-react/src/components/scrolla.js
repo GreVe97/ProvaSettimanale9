@@ -1,5 +1,4 @@
 function scrolla(verso, saga) {
-    console.log(saga);
     let carosello = document.querySelector(`#${saga} .carousel-inner`);
     let scrollata = carosello.offsetWidth * 0.85;
     let maxScrollLeft = carosello.scrollWidth - carosello.offsetWidth;

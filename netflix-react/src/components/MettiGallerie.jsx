@@ -1,6 +1,7 @@
 import React from 'react'
 import {saghe} from '../dati/api';
 import Galleria from './Galleria';
+import { Link } from 'react-router-dom';
 
 export default function MettiGallerie() {
   let sottoSaghe = sottoArray(saghe, Math.floor(Math.random() * (6 - 3 + 1)) + 3)

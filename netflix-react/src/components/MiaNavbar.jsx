@@ -2,19 +2,20 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 function MiaNavbar() {
   return (
    <header>
     <Navbar expand="lg" className="border-bottom border-black navbar">
       <Container fluid className="ps-0">
-        <Navbar.Brand className="me-4" href="#">
+        <Navbar.Brand className="me-4" as={Link} to="/">
           <img src="assets/netflix_logo.png" alt="Logo Netflix" width="100" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link href="#">Tv Shows</Nav.Link>
             <Nav.Link href="#">Movies</Nav.Link>
             <Nav.Link href="#">Recently Added</Nav.Link>
@@ -40,8 +41,8 @@ function MiaNavbar() {
                 </svg>
               </Nav.Link>
               <NavDropdown title={<img src="assets/avatar.png" alt="" width="30" />} id="basic-nav-dropdown">
-                <NavDropdown.Item><img src="assets/avatar.png" alt="" width="25" /> Profilo 1</NavDropdown.Item>
-                <NavDropdown.Item>Impostazioni Profilo</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/Profilo"><img src="assets/avatar.png" alt="" width="25" /> Profilo 1</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/Impostazioni">Impostazioni Profilo</NavDropdown.Item>
                 <NavDropdown.Item>Chiedi Supporto</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item className="text-danger">

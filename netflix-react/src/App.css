@@ -11,16 +11,16 @@ header {
   margin-left: -0.65rem;
 }
 
-header a, footer {
+header a, footer, a, .profilo {
   color: gray !important;
 }
 
-header a:hover, footer a:hover{
+header a:hover, footer a:hover, a:hover{
   color: white !important;
   transform: scale(1.01);
 }
 
-#floatingSelect{
+#floatingSelect {
   width: 6rem;
 }
 
@@ -48,8 +48,8 @@ header a:hover, footer a:hover{
   transform: scale(1.01);
 }
 
-footer a {
-  text-decoration: none;
+a {
+  text-decoration: none !important;
   margin-right: 0.8rem;
   color: gray !important;
 }
@@ -73,12 +73,16 @@ footer ul li {
   color: gray !important;
 }
 
-footer ul li button {
+footer ul li button, .profile-page button {
   color: gray !important;
   margin-top: 0.4rem;
 }
 
-footer ul li button:hover {
+footer ul li button:hover, .profile-page button:hover {
   background-color: rgb(149, 145, 145) !important;
   color: white !important;
 }
+
+
+/*---------------------------Impostazioni-----------------------------------------*/
+
