@@ -63,9 +63,9 @@ export default class Galleria extends Component {
                                         key={film.imdbID}
                                         overlay={
                                             <Popover id={`popover-positioned-${film.imdbID}`}>
-                                                <Card style={{ width: '10rem' }} className='d-flex flex-row border border-2 border-secondary border-end-0 pe-none'>
+                                                <Card style={{ width: '10rem' }} className='d-flex flex-row border border-2 border-secondary pe-none'>
                                                     <Card.Img variant="top" src={film.Poster} />
-                                                    <Card.Body className='border border-2 border-secondary border-start-0'>
+                                                    <Card.Body className='border border-2 border-secondary'>
                                                         <Card.Title style={{ width: '10rem' }}>{film.Title}</Card.Title>
                                                         <Card.Text>
                                                             <strong>Year</strong>: {film.Year}
