@@ -59,11 +59,11 @@ export default class Galleria extends Component {
                                 }
                                 {this.state.movies.map(film =>
                                     <OverlayTrigger
-                                        placement="auto"
+                                        placement="auto-start"
                                         key={film.imdbID}
                                         overlay={
                                             <Popover id={`popover-positioned-${film.imdbID}`}>
-                                                <Card style={{ width: '10rem' }} className='d-flex flex-row border border-2 border-secondary border-end-0 '>
+                                                <Card style={{ width: '10rem' }} className='d-flex flex-row border border-2 border-secondary border-end-0 pe-none'>
                                                     <Card.Img variant="top" src={film.Poster} />
                                                     <Card.Body className='border border-2 border-secondary border-start-0'>
                                                         <Card.Title style={{ width: '10rem' }}>{film.Title}</Card.Title>
