@@ -10,11 +10,11 @@ export default function Impostazioni() {
       <div className="row">
         <div className="col-md-3">
           <h6 className="">MEMBERSHIP & BILLING</h6>
-          <button className="btn btn-membership">Cancel Membership</button>
+          <button className=" btn btn-outline-secondary mt-2">Cancel Membership</button>
         </div>
         <div className="col-md-9">
           <div className="d-flex align-items-center justify-content-between mt-2">
-            <strong>Epicoder1@gmail.com</strong>
+            <strong>emailbella@mapopobella.com</strong>
             <a href="#" className="">Change account email</a>
           </div>
           <div className="d-flex align-items-center justify-content-between mt-2">
@@ -30,7 +30,7 @@ export default function Impostazioni() {
           <div className="d-flex align-items-center justify-content-between mt-2">
             <span>
               <img src="./assets/paypal_logo.png" width="80px" alt="PayPal Logo" />
-              <strong className="ms-2">Epicoder1@gmail.com</strong>
+              <strong className="ms-2">emailbella@mapopobella.com</strong>
             </span>
             <a href="#" className="">Update payment info</a>
           </div>
@@ -98,10 +98,10 @@ export default function Impostazioni() {
           <div className="d-flex align-items-center justify-content-between mt-2">
             <span>
               <img src="./assets/avatar.png" width="36px" alt="User Avatar" />
-              <strong className="ms-2">Epicoder #1</strong>
+              <strong className="ms-2">Profilo 1</strong>
             </span>
             <div className="d-flex flex-column">
-              <a href="#" className="">Manage profiles</a>
+              <a href="#" className="mb-1">Manage profiles</a>
               <a href="#" className="">Add profile email</a>
             </div>
           </div>
@@ -129,6 +129,7 @@ export default function Impostazioni() {
           </div>
         </div>
       </div>
+      <hr />
     </div>
   </div>
   )

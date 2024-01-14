@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export default function Profilo() {
     return (
@@ -16,8 +17,13 @@ export default function Profilo() {
                                 <img src="./assets/avatar.png" className="img-fluid" width="150px" alt="User Avatar" />
                             </div>
                             <div className="col-12 col-md">
-                                <input className="form-control border-0 rounded-0" value="Epicoder #1" type="text" readOnly />
-                                <div className="mb-4 mt-4">
+                                <InputGroup className="mb-1">
+                                    <Form.Control className="border-0 rounded-0 fs-2 ps-0 py-1"
+                                        value="Profilo 1"
+                                        readOnly
+                                    />
+                                </InputGroup>
+                                <div className="mb-4 mt-3">
                                     <h4 className="profilo">Language:</h4>
                                     <select id="languages" className="pe-2 ps-1 py-1 bg-dark fw-bold" >
                                         <option value="1">English</option>
@@ -40,13 +46,13 @@ export default function Profilo() {
                                     <h4 className="profilo">Autoplay Controls:</h4>
                                     <div className="d-flex align-items-center">
                                         <div className="me-2">
-                                        <Form.Check
+                                            <Form.Check
                                                 type='checkbox'
                                                 id={`default`}
                                                 label={`Autoplay next episode in a series on all devices`}
-                                                readOnly 
+                                                readOnly
                                             />
-                                        </div>                                        
+                                        </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-2">
                                         <div className="me-2">
@@ -54,8 +60,8 @@ export default function Profilo() {
                                                 type='checkbox'
                                                 id={`default1`}
                                                 label={`Autoplay next episode in a series on all devices`}
-                                                
-                                                readOnly 
+
+                                                readOnly
                                             />
                                         </div>
                                     </div>

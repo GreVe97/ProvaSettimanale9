@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function MiaNavbar() {
   return (
    <header>
-    <Navbar expand="lg" className="border-bottom border-black navbar">
+    <Navbar expand="lg" className="border-bottom border-black navbar position-sticky">
       <Container fluid className="ps-0">
         <Navbar.Brand className="me-4" as={Link} to="/">
           <img src="assets/netflix_logo.png" alt="Logo Netflix" width="100" />
