@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
-import { Container, Spinner, Alert, } from 'react-bootstrap'
+import { Container, Spinner, Alert, } from 'react-bootstrap';
 import { urlApi } from '../dati/api';
-import scrolla from './scrolla';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import Card from 'react-bootstrap/Card';
 
+function scrolla(verso, saga) {
+    let carosello = document.querySelector(`#${saga} .carousel-inner`);
+    let scrollata = carosello.offsetWidth * 0.85;
+    let maxScrollLeft = carosello.scrollWidth - carosello.offsetWidth;
+    if (verso === -1) {
+        carosello.scrollLeft -= scrollata;
+    } else {
+        carosello.scrollLeft += scrollata;
+    }
+    if (carosello.scrollLeft >= maxScrollLeft) {
+        carosello.scrollLeft = 0;
+    }
+}
 
 export default class Galleria extends Component {
 

@@ -19,8 +19,10 @@ function App() {
       <div className="container">
         <MiaNavbar />
         <Routes>
-          <Route path="/" element={<><SecondoComponente />
-            <MettiGallerie /></>} />
+          <Route path="/" element={<>
+                                    <SecondoComponente/>
+                                    <MettiGallerie/>
+                                    </>} />
           <Route path="/Profilo" element={<Profilo />} />
           <Route path="/Impostazioni" element={<Impostazioni/>} />
 
